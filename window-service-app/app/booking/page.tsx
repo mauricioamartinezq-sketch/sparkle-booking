@@ -104,7 +104,7 @@ export default function BookingPage() {
       } else {
         // 4b. Small job — confirmed immediately, invoiced after service
         const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
-        router.push(`${base}/booking/confirmation/?booking=${booking.id}`);
+        router.push(`/booking/confirmation/?booking=${booking.id}`);
       }
     } catch (err: any) {
       setError(err.message ?? "Something went wrong. Please try again.");
