@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,7 +24,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <header className="mx-auto max-w-5xl px-6 pt-6 flex items-center justify-between">
+          <Link href="/" className="font-display text-lg font-medium text-ink">
+            Sparkle
+          </Link>
+          <Link
+            href="/login/"
+            className="text-sm font-medium text-aqua-700 hover:text-aqua-900 transition-colors"
+          >
+            Sign in
+          </Link>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
