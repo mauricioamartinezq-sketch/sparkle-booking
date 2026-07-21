@@ -120,6 +120,12 @@ function LoginContent() {
               >
                 Book a service
               </Link>
+              <Link
+                href="/bookings/"
+                className="w-full rounded-xl border border-aqua-100 py-3 text-ink/70 font-medium hover:bg-aqua-50 transition-colors"
+              >
+                My bookings
+              </Link>
               <button
                 onClick={signOut}
                 className="w-full rounded-xl border border-aqua-100 py-3 text-ink/70 font-medium hover:bg-aqua-50 transition-colors"
